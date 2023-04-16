@@ -1,38 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    @apply text-rp-text bg-rp-base;
+}
+
 .App {
-  text-align: center;
+    text-align: center;
+    padding: 1rem;
+    overflow: hidden;
+    height: 100%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.Home {
+    display: flex;
+    text-align: left;
+    flex-direction: column;
+    gap: 1rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.Home li {
+    @apply bg-rp-overlay py-2 pl-2;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.AlbumArt {
+    width: 8rem;
+    height: 8rem;
 }
 
-.App-link {
-  color: #61dafb;
+.ArtistArt {
+    width: 8rem;
+    height: 8rem;
+    border-radius: 50%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.Grid {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 2rem;
+}
+
+.Grid li {
+    max-height: 10rem;
+}
+
+.Grid p {
+    width: 7rem;
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: smaller;
+    text-overflow: ellipsis;
+    display: inline-block;
+}
+
+.Table {
+    @apply  text-rp-text;
+    width: 100%;
+    text-align: left;
+    table-layout: fixed;
+    font-size: 2rem;
+    white-space: nowrap;
+}
+
+.Table td {
+    text-overflow: ellipsis;
+    overflow: hidden
 }
